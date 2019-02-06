@@ -37,7 +37,8 @@ Correlation coefficients calculates the relationship between two variables as we
 ```Python
 def corr_plus(var1, var2):
   '''
-  Correlation coefficients calculates the relationship between two variables as well as the magnitude of this relationship.
+  Correlation coefficients calculates the relationship between
+   two variables as well as the magnitude of this relationship.
 
   parameters:
   -----------
