@@ -6,8 +6,8 @@ Latest Update Date: 2019 Feb.
 
 This project is developed to help users calculate correlation coefficients and covariance matrix of a given data with missing values in both R and Python.
 
-[Python Version Link](https://github.com/UBC-MDS/CorrPy)
-[R Version Link](https://github.com/UBC-MDS/CorrR)
+- [Python Version Link](https://github.com/UBC-MDS/CorrPy)
+- [R Version Link](https://github.com/UBC-MDS/CorrR)
 
 # Team
 
