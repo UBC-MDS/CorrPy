@@ -57,7 +57,7 @@ def corr_plus(var1, var2):
 Covariance measures the extent to which corresponding observations from two sets of ordered variables vary in a direction.
 <a href="https://www.codecogs.com/eqnedit.php?latex=Cov(X,Y)&space;=&space;\frac{\sum(x-\overline{x})(y-\overline{y})}{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cov(X,Y)&space;=&space;\frac{\sum(x-\overline{x})(y-\overline{y})}{N}" title="Cov(X,Y) = \frac{\sum(x-\overline{x})(y-\overline{y})}{N}" /></a>
 
-A Covariance matrix displays the variance and covariance together. The diagonal elements represent the variances and the covaeriances are repressented by the other elements in the matrixas shown below.
+A Covariance matrix displays the variance and covariance together. The diagonal elements represent the variances and the covariances are represented by the other elements in the matrix shown below.
 
 
 
