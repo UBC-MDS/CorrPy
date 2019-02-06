@@ -1,4 +1,4 @@
-# Project_name_here
+# CorrPy
 
 Latest Update Date: 2019 Feb.
 
