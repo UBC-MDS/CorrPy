@@ -11,12 +11,8 @@ Latest Update Date: 2019 Feb.
 | WEISHUN DENG | `@Wilson Deng` | `@` | [Wilson's link]()|
 | Mengda Yu | `@Mengda(Albert) Yu` | `@mru4913` | [Albert's link](https://github.com/mru4913/DSCI524_lab03_group15) |
 
-# Overview
+# Milestone Progress
 
-
-
-# Function
-
-
-
-# R and Python Environment
+| Milestone | Tasks |
+|---|---|
+|Milestone 1 | [Proposal](https://github.com/UBC-MDS/CorrPy/blob/master/docs/proposal.md)|
