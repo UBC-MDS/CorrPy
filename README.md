@@ -18,6 +18,19 @@ This project is developed to help users calculate correlation coefficients and c
 | WEISHUN DENG | `@Wilson Deng` | `@xiaoweideng` | [Wilson's link](https://github.com/xiaoweideng/Corrpy)|
 | Mengda Yu | `@Mengda(Albert) Yu` | `@mru4913` | [Albert's link](https://github.com/mru4913/Corrpy) |
 
+# Functions
+
+- `std_plus`
+
+Standard deviation calculates how close the data points to the mean, in which an insight for the variation of the data points. This function would automatically handle the missing values in the input.
+
+- `corr_plus`
+
+Correlation coefficients calculates the relationship between two variables as well as the magnitude of this relationship. This function would automatically handle the missing values in the input.
+
+- `cov_mx`
+
+A Covariance matrix displays the variance and covariance together. This function would use the above two functions.
 
 # Milestone Progress
 
