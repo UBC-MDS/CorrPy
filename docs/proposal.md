@@ -67,7 +67,8 @@ A Covariance matrix displays the variance and covariance together. The diagonal 
 ```Python
 cov_mx(matrix):
   '''
-  Covariance measures the extent to which corresponding observations from two sets of ordered variables vary in a direction.
+  Covariance measures the extent to which corresponding observations 
+  from two sets of ordered variables vary in a direction.
 
   parameters:
   -----------
