@@ -25,11 +25,11 @@ def test_type():
         corrPy.corr_plus(single_x)
         corrPy.corr_plus(mix_type_x,mix_type_y)
         corrPy.corr_plus(mix_type_x,multi_y_plus)
-        corrPy.corr_plus(single_x, single_y)
 
 # The output length should be 1
 def test_length():
-    assert length(corr_plus(multi_x, multi_y)) == 1
+    assert corrPy.corr_plus(single_x, single_y) == None
+    assert length(corrPy.corr_plus(multi_x, multi_y)) == 1
 
 # Return Error if one of the input is zero
 def test_zero():
@@ -38,7 +38,7 @@ def test_zero():
 
 # Test if it can calculate the right value
 def test_value():
-    assert corr_plus(pos_neg_x, pos_neg_y) == -0.9694164
-    assert corr_plus(large_x, large_y) == -0.9595082
-    assert corr_plus(missing_x, missing_x) == 1
-    assert corr_plus(missing_x, missing_y) == -0.1220935
+    assert corrPy.corr_plus(pos_neg_x, pos_neg_y) == -0.9694164
+    assert corrPy.corr_plus(large_x, large_y) == -0.9595082
+    assert corrPy.corr_plus(missing_x, missing_x) == 1
+    assert corrPy.corr_plus(missing_x, missing_y) == -0.1220935
