@@ -1,6 +1,8 @@
 # Overview
 
-This package is developed to help users calculate correlation coefficients and covariance matrix of a given data with missing values. In order to implement correlation coefficients and covariance matrix, the standard deviation of the data is needed however the world of data is not always clean and tidy. Python's `numpy` fails to return standard deviation and calculation of the correlation coefficients when the data has missing values. This package aims to overcome this obstacle and help users handle missing values when calculating correlation coefficients and covariance matrix.
+This package is developed to help users calculate correlation coefficients and covariance matrix of a given data with missing values. In order to implement correlation coefficients and covariance matrix, the standard deviation of the data is needed however the world of data is not always clean and tidy. Python's `numpy` fails to return standard deviation and calculation of the correlation coefficients when the data has missing values. This package aims to overcome this obstacle and help users handle missing values when calculating correlation coefficients and covariance matrix. `CorrPy` uses likewise deletion method to handle missing values: removing the rows of a data frame where the missing values are present.
+
+*Note: If the course timeline permits, `CorrPy` will handle missing values via single manipulation with mean value: replacing the missing values with the mean of existing values.* 
 
 
 ## Standard Deviation (`std_plus`)
@@ -67,7 +69,7 @@ A Covariance matrix displays the variance and covariance together. The diagonal 
 ```Python
 cov_mx(matrix):
   '''
-  Covariance measures the extent to which corresponding observations 
+  Covariance measures the extent to which corresponding observations
   from two sets of ordered variables vary in a direction.
 
   parameters:
