@@ -10,10 +10,10 @@ def cov_mx(matrix):
 
   parameters:
   -----------
-  matrix (float): a matrix that contains one or more than one random variable
+  matrix (2D np.array): a matrix that contains one or more than one random variable
 
   Return:
   -------
-  cov_matrix (float): a matrix that contains the correlation between random variables in the input matrix
+  cov_matrix (2D np.array): a matrix that contains the correlation between random variables in the input matrix
   '''
   return
