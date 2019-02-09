@@ -37,12 +37,12 @@ def test_length():
 
 # Test if it can calculate the right value
 def test_missing_value():
-    assert corrPy.cov_max(matrix_missing) == (4,4) # using pair wise complete so the shape is deducted
+    assert np.shape(corrPy.cov_max(matrix_missing)) == (4,4) # using pair wise complete so the shape is deducted
 
 # Test if it can calculate the right value
 def test_value():
-    assert corrPy.cov_max(matrix_full) == np.ones((5,5))*2.5 # can deal with 2D array
-    assert corrPy.cov_max(matrix_missing) == np.ones((4,4))*2.5 # can deal with NA and calculates the right value
-    assert corrPy.cov_max(np.array([pos_neg_x, pos_neg_y])) == np.cov(np.array([pos_neg_x, pos_neg_y])) # can deal with 2 1D array inputs
-    assert corrPy.cov_max(np.array([large_x, large_y])) == np.cov(np.array([large_x, large_y])) # can deal with large number
-    assert corrPy.cov_max(np.array([zeros_x, pos_neg_y])) == np.cov(np.array([zeros_x, pos_neg_y])) # can deal with zero vector
+    assert (corrPy.cov_max(matrix_full) == np.ones((5,5))*2.5).all() # can deal with 2D array
+    assert (corrPy.cov_max(matrix_missing) == np.ones((4,4))*2.5).all() # can deal with NA and calculates the right value
+    assert (corrPy.cov_max(np.array([pos_neg_x, pos_neg_y])) == np.cov(np.array([pos_neg_x, pos_neg_y]))).all() # can deal with 2 1D array inputs
+    assert (corrPy.cov_max(np.array([large_x, large_y])) == np.cov(np.array([large_x, large_y]))).all() # can deal with large number
+    assert (corrPy.cov_max(np.array([zeros_x, pos_neg_y])) == np.cov(np.array([zeros_x, pos_neg_y]))).all() # can deal with zero vector
