@@ -1,9 +1,12 @@
 
 ## inititalization
 
+import os
+import sys
+sys.path.insert(0, os.path.abspath("../../CorrPy"))
 import numpy as np
 import pytest
-import corrPy
+import CorrPy
 
 one_x = [11]
 char_x = [1,"2",3,4,5]

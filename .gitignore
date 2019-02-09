@@ -1,3 +1,4 @@
 .DS_Store
 .Rhistory
 docs/.Rhistory
+CorrPy/__pycache__/
