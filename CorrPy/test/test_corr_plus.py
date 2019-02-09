@@ -29,7 +29,7 @@ def test_type():
 # The output length should be 1
 def test_length():
     assert corrPy.corr_plus(single_x, single_y) == None # expect None if the length of both vectors are one
-    assert length(corrPy.corr_plus(multi_x, multi_y)) == 1 # length of output is 1
+    assert len(corrPy.corr_plus(multi_x, multi_y)) == 1 # length of output is 1
 
 # Return Error if one of the input is zero
 def test_zero():
@@ -41,4 +41,4 @@ def test_value():
     assert corrPy.corr_plus(pos_neg_x, pos_neg_y) == -0.9694164 # deal with negative numbers
     assert corrPy.corr_plus(large_x, large_y) == -0.9595082 # can deal with large numbers
     assert corrPy.corr_plus(missing_x, missing_x) == 1 # can deal with missing values
-    assert corrPy.corr_plus(missing_x, missing_y) == -0.1220935 
+    assert corrPy.corr_plus(missing_x, missing_y) == -0.1220935
