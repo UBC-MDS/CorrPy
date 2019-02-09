@@ -20,11 +20,11 @@ def test_type():
     with pytest.raise(TypeError):
         corrPy.std_plus(mix_type_x) # return ERROR if input vector has a string
 		corrPy.std_plus(bool_x)# return ERROR if input vector is boolean
- 
-        
+
+
 # The output should be of length 1
 def test_length():
-    assert length(std_plus(multi_x)) == 1 # length of the computed output is 1
+    assert len(std_plus(multi_x)) == 1 # length of the computed output is 1
 
 
 # Test the computed values of standard deviation

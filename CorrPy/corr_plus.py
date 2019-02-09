@@ -11,12 +11,12 @@ def corr_plus(var1, var2):
 
   parameters:
   -----------
-  var1 (float): a list or an array of the first random variable
-  var2 (float): a list or an array of the second random variable
+  var1 (list): a list or an array of the first random variable
+  var2 (list): a list or an array of the second random variable
 
   Return:
   -------
-  corr (float): a single value correlation between two variables
+  corr (number): a single value correlation between two variables
   '''
   # Stub
   return
