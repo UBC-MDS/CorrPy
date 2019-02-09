@@ -3,7 +3,7 @@
 ## `cov_mx` function calculates the covariance matrix of the two
 ## variables and automatically deals with the missing value
 
-cov_mx(matrix):
+def cov_mx(matrix):
   '''
   Covariance measures the extent to which corresponding observations
   from two sets of ordered variables vary in a direction.
