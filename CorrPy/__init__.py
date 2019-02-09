@@ -1,1 +1,2 @@
 ## inititalization
+name = "CorrPy"
