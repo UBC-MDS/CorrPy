@@ -14,6 +14,6 @@ def cov_mx(matrix):
 
   Return:
   -------
-  cov_matrix (2D np.array): a matrix that contains the correlation between random variables in the input matrix
+  cov_matrix (2D np.array): a matrix that contains the covariance between random variables in the input matrix
   '''
   return
