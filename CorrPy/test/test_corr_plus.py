@@ -5,7 +5,7 @@ import sys
 sys.path.insert(0, os.path.abspath("../../CorrPy"))
 import numpy as np
 import pytest
-import corrPy
+import CorrPy
 
 single_x = [11]
 single_y = [22]
@@ -24,24 +24,24 @@ missing_y = [2,3,4,5,np.nan,1,3,4]
 
 # Return Error if wrong type
 def test_type():
-    with pytest.raise(TypeError):
-        corrPy.corr_plus(single_x) # return ERROR if the input is not a vector
-        corrPy.corr_plus(mix_type_x,mix_type_y) # expect ERROR if the input are not numeric
-        corrPy.corr_plus(mix_type_x,multi_y_plus) # expect ERROR if the length of two vectors are different
+    with pytest.raises(TypeError):
+        CorrPy.corr_plus(single_x, single_y) # return ERROR if the input is not a vector
+        CorrPy.corr_plus(mix_type_x,mix_type_y) # expect ERROR if the input are not numeric
+        CorrPy.corr_plus(mix_type_x,multi_y_plus) # expect ERROR if the length of two vectors are different
 
 # The output length should be 1
 def test_length():
-    assert corrPy.corr_plus(single_x, single_y) == None # expect None if the length of both vectors are one
-    assert len(corrPy.corr_plus(multi_x, multi_y)) == 1 # length of output is 1
+    assert CorrPy.corr_plus(single_x, single_y) == None # expect None if the length of both vectors are one
+    assert len(CorrPy.corr_plus(multi_x, multi_y)) == 1 # length of output is 1
 
 # Return Error if one of the input is zero
 def test_zero():
-    with pytest.raise(TypeError):
-        corrPy.corr_plus(zeros_x, pos_neg_y) # fail if the input is zero vector
+    with pytest.raises(TypeError):
+        CorrPy.corr_plus(zeros_x, pos_neg_y) # fail if the input is zero vector
 
 # Test if it can calculate the right value
 def test_value():
-    assert corrPy.corr_plus(pos_neg_x, pos_neg_y) == -0.9694164 # deal with negative numbers
-    assert corrPy.corr_plus(large_x, large_y) == -0.9595082 # can deal with large numbers
-    assert corrPy.corr_plus(missing_x, missing_x) == 1 # can deal with missing values
-    assert corrPy.corr_plus(missing_x, missing_y) == -0.1220935
+    assert CorrPy.corr_plus(pos_neg_x, pos_neg_y) == -0.9694164 # deal with negative numbers
+    assert CorrPy.corr_plus(large_x, large_y) == -0.9595082 # can deal with large numbers
+    assert CorrPy.corr_plus(missing_x, missing_x) == 1 # can deal with missing values
+    assert CorrPy.corr_plus(missing_x, missing_y) == -0.1220935
