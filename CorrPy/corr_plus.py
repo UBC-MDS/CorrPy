@@ -4,7 +4,7 @@
 ## two variables as well as the magnitude of this relationship.
 
 
-corr_plus(var1, var2):
+def corr_plus(var1, var2):
   '''
   Correlation coefficients calculates the relationship between
    two variables as well as the magnitude of this relationship.
