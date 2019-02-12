@@ -23,14 +23,14 @@ def corr_plus(var1, var2):
         var1 = np.array(var1)
         var2 = np.array(var2)
     else:
-        print("Invalid data input")
+        raise ValueError("Invalid data input")
 
     length_1 = len(var1)
     length_2 = len(var2)
 
     # Check input lengths
     if length_1 != length_2:
-        print("Input should be equal")
+        raise ValueError("Input should be equal")
 
     # return None if two single input
     if length_1 == length_2 == 1:
@@ -43,6 +43,10 @@ def corr_plus(var1, var2):
             idx_del.append(i)
     var1 = np.delete(var1,idx_del)
     var2 = np.delete(var2,idx_del)
+
+    # Raise Error if zero vector
+    if (var1 == 0).all() or (var2 == 0).all():
+        raise ValueError("Input cannot be zero vector")
 
     # Calculate means
     mean_var1 = var1.mean()
