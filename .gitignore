@@ -2,3 +2,4 @@
 .Rhistory
 docs/.Rhistory
 **__pycache__/
+**.vscode/
