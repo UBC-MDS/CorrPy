@@ -18,4 +18,5 @@ def std_plus(x):
   sd_value (float): the value of standard deviation of the input data
   '''
   sd_value = np.sqrt(np.sum((x - np.mean(x))**2)/(len(x) - 1)) 
+  
   return sd_value
