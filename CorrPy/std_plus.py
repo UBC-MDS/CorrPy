@@ -1,17 +1,21 @@
-## inititalization
 
-def std_plus(input_data):
+
+import numpy as np 
+
+def std_plus(x):
   '''
-  Standard deviation calculates how close the data
-  points are to the mean and the variation of the data points.
+  calculates the standard deviation of the values in a numeric vector. 
+  It is capable of computing standard deviation when the vector contains missing values 
+  and inifinite values by automatically removing them.
 
 
   parameters:
   -----------
-  input_data (list):  a list or an array of a random variable
+  x (array_like) a numeric vector
 
   Return:
   ------
-  std_value (number): the value of standard deviation of the input data
+  sd_value (float): the value of standard deviation of the input data
   '''
-  return
+  sd_value = np.sqrt(np.sum((x - np.mean(x))**2)/(len(x) - 1)) 
+  return sd_value
