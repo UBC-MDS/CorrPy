@@ -17,6 +17,33 @@ def std_plus(x):
   ------
   sd_value (float): the value of standard deviation of the input data
   '''
-  sd_value = np.sqrt(np.sum((x - np.mean(x))**2)/(len(x) - 1)) 
+   # check whether a input vector is valid
+  length = len(x)
+  if length == 1: # return 0.0 The length of input equals to 1
+    return 0.0
+  elif length == 0: # return nan if no input 
+    return np.nan
+
+  if isinstance(x, (list, tuple, np.ndarray)):
+    try:
+      x = np.array(x)
+    except:
+      print("Invalid data input")
+
   
+  # treat infinite values as missing values and remove them
+  x = x[~ np.isinf(x)]
+
+  # remove missing values
+  x = x[~ np.isnan(x)]
+
+  # calculate standard deviation
+  sd_value = np.sqrt(np.mean(abs(x - x.mean())**2)) # default method in Numpy 
+
+  # The following method includes degree of freedom 
+  # mu = sum(x) / length
+  # differences = [i - mu for i in x]
+  # sq_differences = [d ** 2 for d in differences]
+  # sd_value = np.sqrt(sum(sq_differences) / (length - 1))
+
   return sd_value
