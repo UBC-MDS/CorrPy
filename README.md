@@ -40,7 +40,7 @@ Standard deviation calculates how close the data points to the mean, in which an
 `std_plus` will omit frustration from workflows.
 
 <BR>
-#### *Example*:
+### *Example*:
 
 ```Python
 >>> x = [1,2, np.nan, 4, np.nan, 6]
@@ -63,7 +63,7 @@ Correlation coefficients calculates the relationship between two variables as we
 <a href="https://www.codecogs.com/eqnedit.php?latex=r&space;=&space;\frac{1}{n-1}(\frac{\sum(x-\overline{x})(y-\overline{y})}{s_{x}s_{y}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?r&space;=&space;\frac{1}{n-1}(\frac{\sum(x-\overline{x})(y-\overline{y})}{s_{x}s_{y}})" title="r = \frac{1}{n-1}(\frac{\sum(x-\overline{x})(y-\overline{y})}{s_{x}s_{y}})" /></a>
 
 <BR>
-#### *Example*:
+### *Example*:
 
 ```Python
 >>> x = [1,2,np.nan,4,5]
@@ -88,7 +88,7 @@ A covariance matrix displays the variance and covariance together. The diagonal 
 
 
 <BR>
-#### *Example*:
+### *Example*:
 
 ```Python
 >>> x = [1,2,np.nan,4,5]
