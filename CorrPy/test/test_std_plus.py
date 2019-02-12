@@ -26,10 +26,10 @@ def test_type():
     assert np.isnan(CorrPy.std_plus(bool_x)) == False # expect a return if input vector has bool
     assert np.isnan(CorrPy.std_plus(pos_neg_x)) == False # expect a return if input vector type is numeric
         
-# The output should be of length 1
-def test_length():
-    assert len(CorrPy.std_plus(multi_x)) == 1 # length of the computed output is 1
-    assert len(CorrPy.std_plus(pos_neg_x)) == 1 
+# The output should not be none 
+def test_output_format():
+    assert np.isnan(CorrPy.std_plus(multi_x)) == False
+    assert np.isnan(CorrPy.std_plus(pos_neg_x)) == False
 
 # Test the computed values of standard deviation
 def test_value():
