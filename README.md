@@ -93,8 +93,9 @@ A covariance matrix displays the variance and covariance together. The diagonal 
 ```Python
 >>> x = [1,2,np.nan,4,5]
 >>> y = [-6,-7,-8,9,True]
->>> corr_plus(x,y)
-array([0.7391090892601785])
+>>> cov_mx([x,y])
+array([[ 2.33333333, 12.66666667],
+       [12.66666667, 80.33333333]])
 ```
 
 
