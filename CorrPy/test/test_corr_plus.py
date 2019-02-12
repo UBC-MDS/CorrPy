@@ -33,7 +33,7 @@ def test_type():
 # The output length should be 1
 def test_length():
     assert CorrPy.corr_plus(single_x, single_y) == None # expect None if the length of both vectors are one
-    assert len(CorrPy.corr_plus(multi_x, multi_y)) == 1 # length of output is 1
+    assert isinstance(CorrPy.corr_plus(multi_x,mix_type_y), (float, int, complex)) # output should be a number
 
 # Return Error if one of the input is zero
 def test_zero():
