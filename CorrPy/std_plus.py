@@ -22,13 +22,13 @@ def std_plus(x):
   if length == 1: # return 0.0 The length of input equals to 1
     return 0.0
   elif length == 0: # return nan if no input 
-    return np.nan
+    raise ValueError("The input cannot be empty.")
 
   if isinstance(x, (list, tuple, np.ndarray)):
     try:
       x = np.array(x)
     except:
-      print("Invalid data input")
+      print("Invalid data input.")
 
   
   # treat infinite values as missing values and remove them
@@ -36,6 +36,10 @@ def std_plus(x):
 
   # remove missing values
   x = x[~ np.isnan(x)]
+
+  # check if an array is empty after we remove inf and nan
+  if x.size == 0:
+    return np.nan
 
   # calculate standard deviation
   sd_value = np.sqrt(np.mean(abs(x - x.mean())**2)) # default method in Numpy 
