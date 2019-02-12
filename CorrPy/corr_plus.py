@@ -1,5 +1,5 @@
 ## Wilson Deng
-## Feb 8th, 2019
+## Feb 11th, 2019
 ## `corr_plus` function coefficients calculates the relationship between
 ## two variables as well as the magnitude of this relationship.
 
