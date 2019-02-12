@@ -19,6 +19,13 @@ This package is developed to help users calculate correlation coefficients and c
 | GOPALAKRISHNAN ANDIVEL | `@Krish` | `@Gopsathvik` | [Krish's link](https://github.com/Gopsathvik/CorrPy)|
 | WEISHUN DENG | `@Wilson Deng` | `@xiaoweideng` | [Wilson's link](https://github.com/xiaoweideng/Corrpy)|
 | Mengda Yu | `@Mengda(Albert) Yu` | `@mru4913` | [Albert's link](https://github.com/mru4913/Corrpy) |
+<BR>
+## Installation
+
+`CorrPy` can be installed with pip:
+
+`pip install git https://github.com/UBC-MDS/CorrPy.git`
+
 
 ## Functions
 
@@ -26,11 +33,25 @@ This package is developed to help users calculate correlation coefficients and c
 
 Standard deviation calculates how close the data points to the mean, in which an insight for the variation of the data points. This function would automatically handle the missing values in the input.
 
--
+<BR>
 <a href="https://www.codecogs.com/eqnedit.php?latex=s&space;=&space;\sqrt{\frac{\sum(x-\overline{x})^2}{n-1}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?s&space;=&space;\sqrt{\frac{\sum(x-\overline{x})^2}{n-1}}" title="s = \sqrt{\frac{\sum(x-\overline{x})^2}{n-1}}" /></a>
 <BR>
 
 `std_plus` will omit frustration from workflows.
+
+<BR>
+#### *Example*:
+
+```Python
+>>> x = [1,2, np.nan, 4, np.nan, 6]
+>>> std_plus(x)
+array([1.920286436967152])
+
+>>> y = [1,2, np.inf, 4, np.nan, 6, "a"]
+>>> np.std_plus(y)
+array([1.920286436967152])
+```
+
 
 <BR>
 
@@ -49,7 +70,7 @@ A Covariance matrix displays the variance and covariance together. This function
 
 <BR>
 <a href="https://www.codecogs.com/eqnedit.php?latex=Cov(X,Y)&space;=&space;\frac{\sum(x-\overline{x})(y-\overline{y})}{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Cov(X,Y)&space;=&space;\frac{\sum(x-\overline{x})(y-\overline{y})}{N}" title="Cov(X,Y) = \frac{\sum(x-\overline{x})(y-\overline{y})}{N}" /></a>
-
+<BR>
 A covariance matrix displays the variance and covariance together. The diagonal elements represent the variances and the covariances are represented by the other elements in the matrix shown below.
 <BR>
 
