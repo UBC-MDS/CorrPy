@@ -25,7 +25,7 @@ This package is developed to help users calculate correlation coefficients and c
 
 `CorrPy` can be installed with pip:
 
-`pip install git https://github.com/UBC-MDS/CorrPy.git`
+`pip install git+https://github.com/UBC-MDS/CorrPy.git`
 
 
 ## Functions
