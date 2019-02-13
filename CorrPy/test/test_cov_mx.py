@@ -36,7 +36,7 @@ def test_type():
 # Test the output shape
 def test_length():
     assert CorrPy.cov_mx(np.array([single_x, single_y])) == None # two single value return none
-    assert np.shape(cov_mx(matrix_full))[0] == np.shape(cov_mx(matrix_full))[1] # the output shape should match
+    assert np.shape(CorrPy.cov_mx(matrix_full))[0] == np.shape(CorrPy.cov_mx(matrix_full))[1] # the output shape should match
 
 # Test if it can calculate the right value
 def test_missing_value():
