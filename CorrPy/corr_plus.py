@@ -47,7 +47,7 @@ def corr_plus(var1, var2):
 
     # Raise Error if zero vector
     if (var1 == 0).all() or (var2 == 0).all():
-        raise ValueError("Input cannot be zero vector")
+        raise TypeError("Input cannot be zero vector")
 
     # Calculate means
     mean_var1 = var1.mean()
