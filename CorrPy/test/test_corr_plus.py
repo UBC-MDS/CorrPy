@@ -1,4 +1,4 @@
-## inititalization
+## Test for corr_plus.py
 
 import os
 import sys
@@ -7,6 +7,7 @@ import numpy as np
 import pytest
 import CorrPy
 
+# create some fake variables
 single_x = [11]
 single_y = [22]
 zeros_x = [0,0,0,0]
@@ -42,7 +43,10 @@ def test_zero():
 
 # Test if it can calculate the right value
 def test_value():
-    assert round(CorrPy.corr_plus(pos_neg_x, pos_neg_y),5) == round(np.corrcoef(pos_neg_x, pos_neg_y)[0,1],5) # deal with negative numbers
-    assert round(CorrPy.corr_plus(large_x, large_y),5) == round(np.corrcoef(large_x, large_y)[0,1],5) # can deal with large numbers
-    assert CorrPy.corr_plus(missing_x, missing_x) == 1 # can deal with missing values
+    # deal with negative numbers
+    assert round(CorrPy.corr_plus(pos_neg_x, pos_neg_y),5) == round(np.corrcoef(pos_neg_x, pos_neg_y)[0,1],5) 
+    # can deal with large numbers
+    assert round(CorrPy.corr_plus(large_x, large_y),5) == round(np.corrcoef(large_x, large_y)[0,1],5) 
+    # can deal with missing values
+    assert CorrPy.corr_plus(missing_x, missing_x) == 1 
     assert round(CorrPy.corr_plus(missing_x, missing_y),5) == round(np.corrcoef(rm_x, rm_y)[0,1],5)

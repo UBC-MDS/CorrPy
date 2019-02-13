@@ -1,5 +1,4 @@
-
-## inititalization
+# Test for std_plus.py
 
 import os
 import sys
@@ -8,6 +7,7 @@ import numpy as np
 import pytest
 import CorrPy
 
+# create some fake variables 
 one_x = [11]
 char_x = [1,"2",3,4,5]
 complex_x = [1,"2",3,4,5+7j]
@@ -33,8 +33,13 @@ def test_output_format():
 
 # Test the computed values of standard deviation
 def test_value():
-    assert CorrPy.std_plus(one_x) == 0.0 # return zero when input has one element
-    assert CorrPy.std_plus(pos_neg_x) == 2.692582403567252 # compute standard deviation for input of positive and negative numbers
-    assert CorrPy.std_plus(large_x) == 2054.8046676563254 # compute standard deviation for large numbers
-    assert CorrPy.std_plus(miss_x) == CorrPy.std_plus(multi_x) # ignore the NA and compute the standard deviation for the rest of the numbers
-    assert CorrPy.std_plus(zeros_x) == 0.0 # return zero if input vector are all zeros
+    # return zero when input has one element
+    assert CorrPy.std_plus(one_x) == 0.0 
+    # compute standard deviation for input of positive and negative numbers
+    assert CorrPy.std_plus(pos_neg_x) == 2.692582403567252 
+    # compute standard deviation for large numbers
+    assert CorrPy.std_plus(large_x) == np.std(large_x) 
+    # ignore the NA and compute the standard deviation for the rest of the numbers
+    assert CorrPy.std_plus(miss_x) == CorrPy.std_plus(multi_x) 
+    # return zero if input vector are all zeros
+    assert CorrPy.std_plus(zeros_x) == 0.0

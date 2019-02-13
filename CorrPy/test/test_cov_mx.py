@@ -33,8 +33,8 @@ def test_type():
         CorrPy.cov_mx(np.array([mix_type_x,mix_type_y])) # fail if wrong type
         CorrPy.cov_mx(pos_neg_x) # fail if it is 1D array
 
-# Test the output shape
-def test_length():
+# Test the output
+def test_output():
     assert CorrPy.cov_mx(np.array([single_x, single_y])) == None # two single value return none
     assert np.shape(CorrPy.cov_mx(matrix_full))[0] == np.shape(CorrPy.cov_mx(matrix_full))[1] # the output shape should match
 
