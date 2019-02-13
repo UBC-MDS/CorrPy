@@ -3,6 +3,7 @@
 ## `corr_plus` function coefficients calculates the relationship between
 ## two variables as well as the magnitude of this relationship.
 
+import numpy as np
 
 def corr_plus(var1, var2):
     '''
