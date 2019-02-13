@@ -19,7 +19,8 @@ This package is developed to help users calculate correlation coefficients and c
 | GOPALAKRISHNAN ANDIVEL | `@Krish` | `@Gopsathvik` | [Krish's link](https://github.com/Gopsathvik/CorrPy)|
 | WEISHUN DENG | `@Wilson Deng` | `@xiaoweideng` | [Wilson's link](https://github.com/xiaoweideng/Corrpy)|
 | Mengda Yu | `@Mengda(Albert) Yu` | `@mru4913` | [Albert's link](https://github.com/mru4913/Corrpy) |
-<BR>
+
+
 ## Installation
 
 `CorrPy` can be installed with pip:
@@ -40,6 +41,7 @@ Standard deviation calculates how close the data points to the mean, in which an
 `std_plus` will omit frustration from workflows.
 
 <BR>
+ 
 ### *Example*:
 
 ```Python
@@ -63,6 +65,7 @@ Correlation coefficients calculates the relationship between two variables as we
 <a href="https://www.codecogs.com/eqnedit.php?latex=r&space;=&space;\frac{1}{n-1}(\frac{\sum(x-\overline{x})(y-\overline{y})}{s_{x}s_{y}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?r&space;=&space;\frac{1}{n-1}(\frac{\sum(x-\overline{x})(y-\overline{y})}{s_{x}s_{y}})" title="r = \frac{1}{n-1}(\frac{\sum(x-\overline{x})(y-\overline{y})}{s_{x}s_{y}})" /></a>
 
 <BR>
+ 
 ### *Example*:
 
 ```Python
@@ -74,6 +77,7 @@ array([0.7391090892601785])
 
 
 <BR>
+ 
 ### Covariance Matrix (`cov_mx`)
 
 A Covariance matrix displays the variance and covariance together. This function would use the above two functions.
@@ -88,6 +92,7 @@ A covariance matrix displays the variance and covariance together. The diagonal 
 
 
 <BR>
+ 
 ### *Example*:
 
 ```Python
@@ -100,6 +105,7 @@ array([[ 2.33333333, 12.66666667],
 
 
 <BR>
+ 
 ### *How does `CorrPy` package fits into the Python ecosystem?*
 
   Following functions are already present in Python ecosystem. However, missing values are not being handles for the following functions and `CorrPy` package will implement calculation of standard deviation, correlation coefficients and covariance matrix.
