@@ -7,8 +7,9 @@ import numpy as np
 
 def corr_plus(var1, var2):
     '''
-    Correlation coefficients calculates the relationship between
-    two variables as well as the magnitude of this relationship.
+    calculate the Pearson correlation coefficient between
+    two variables using complete case analysis that excludes all observations
+    that have NA for at least one variable.
 
     parameters:
     -----------

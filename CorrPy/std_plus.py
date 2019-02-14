@@ -1,5 +1,4 @@
 
-
 import numpy as np 
 
 def std_plus(x):
@@ -7,7 +6,6 @@ def std_plus(x):
   Calculates the standard deviation of the values in a numeric vector. 
   It is capable of computing standard deviation when the vector contains missing values 
   and inifinite values by automatically removing them.
-
 
   parameters:
   -----------
@@ -24,12 +22,12 @@ def std_plus(x):
   elif length == 0: # return nan if no input 
     raise ValueError("The input cannot be empty.")
 
+  # convert the input vector to numpy array if it is an array-like 
   if isinstance(x, (list, tuple, np.ndarray)):
     try:
       x = np.array(x)
     except:
       print("Invalid data input.")
-
   
   # treat infinite values as missing values and remove them
   x = x[~ np.isinf(x)]
