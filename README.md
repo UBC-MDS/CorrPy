@@ -23,7 +23,7 @@ This package is developed to help users calculate correlation coefficients and c
 
 ## Installation
 
-`CorrPy` can be installed with pip:
+`CorrPy` can be installed with pip in a command window:
 
 `pip install git+https://github.com/UBC-MDS/CorrPy.git`
 
@@ -45,6 +45,7 @@ Standard deviation calculates how close the data points to the mean, in which an
 ### *Example*:
 
 ```Python
+>>> import CorrPy
 >>> x = [1,2, np.nan, 4, np.nan, 6]
 >>> std_plus(x)
 array([1.920286436967152])
@@ -69,6 +70,7 @@ Correlation coefficients calculates the relationship between two variables as we
 ### *Example*:
 
 ```Python
+>>> import CorrPy
 >>> x = [1,2,np.nan,4,5]
 >>> y = [-6,-7,-8,9,True]
 >>> corr_plus(x,y)
@@ -96,6 +98,7 @@ A covariance matrix displays the variance and covariance together. The diagonal 
 ### *Example*:
 
 ```Python
+>>> import CorrPy
 >>> x = [1,2,np.nan,4,5]
 >>> y = [-6,-7,-8,9,True]
 >>> cov_mx([x,y])
@@ -121,3 +124,5 @@ Python Covariance Matrix: https://docs.scipy.org/doc/numpy-1.15.0/reference/gene
 | Milestone | Tasks |
 |---|---|
 |Milestone 1 | [Proposal](https://github.com/UBC-MDS/CorrPy/blob/master/docs/proposal.md)|
+|Milestone 2 | [Function Code](https://github.com/UBC-MDS/CorrPy/tree/master/CorrPy)|
+|            | [Test Code](https://github.com/UBC-MDS/CorrPy/tree/master/CorrPy/test)|
