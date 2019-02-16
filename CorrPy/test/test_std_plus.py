@@ -16,6 +16,7 @@ pos_neg_x = [1,-2,3,-4]
 large_x = [1000,-2000,3000]
 multi_x = [1,2,3,4,5,6,7]
 miss_x = [1,2,3,4,5,6,7, np.nan]
+inf_x = [1,2,3,4,5,6,7, np.inf]
 
 def test_type():
     '''test if the input is in a valid format'''
@@ -40,5 +41,7 @@ def test_value():
     assert CorrPy.std_plus(large_x) == np.std(large_x) 
     # ignore the NA and compute the standard deviation for the rest of the numbers
     assert CorrPy.std_plus(miss_x) == CorrPy.std_plus(multi_x) 
+    #ignore finite and compute standard deviation for the rest of the numbers
+    assert CorrPy.std_plus(inf_x) == CorrPy.std_plus(multi_x)
     # return zero if input vector are all zeros
     assert CorrPy.std_plus(zeros_x) == 0.0
