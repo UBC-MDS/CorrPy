@@ -11,8 +11,8 @@ import CorrPy
 single_x = [11]
 single_y = [22]
 zeros_x = [0,0,0,0]
-pos_neg_x = [1,-2,3,-4]
-pos_neg_y = [-6,7,-8,9]
+positive_negative_x = [1,-2,3,-4]
+positive_negative_y = [-6,7,-8,9]
 large_x = [1000,-2000,3000]
 large_y = [-6000,7000,-8000]
 multi_x = [1,2,3,4,5]
@@ -39,12 +39,12 @@ def test_output():
 def test_zero():
     '''test if one of the input is zero and return ERROR'''
     with pytest.raises(TypeError):
-        CorrPy.corr_plus(zeros_x, pos_neg_y) # fail if the input is zero vector
+        CorrPy.corr_plus(zeros_x, positive_negative_y) # fail if the input is zero vector
 
 def test_value():
     '''test the correctness of the output'''
     # deal with negative numbers
-    assert round(CorrPy.corr_plus(pos_neg_x, pos_neg_y),5) == round(np.corrcoef(pos_neg_x, pos_neg_y)[0,1],5) 
+    assert round(CorrPy.corr_plus(positive_negative_x, positive_negative_y),5) == round(np.corrcoef(positive_negative_x, positive_negative_y)[0,1],5) 
     # can deal with large numbers
     assert round(CorrPy.corr_plus(large_x, large_y),5) == round(np.corrcoef(large_x, large_y)[0,1],5) 
     # can deal with missing values
