@@ -10,8 +10,8 @@ import CorrPy
 single_x = [11]
 single_y = [22]
 zeros_x = [0,0,0,0]
-pos_neg_x = [1,-2,3,-4]
-pos_neg_y = [-6,7,-8,9]
+positive_negative_x = [1,-2,3,-4]
+positive_negative_y = [-6,7,-8,9]
 large_x = [1000,-2000,3000]
 large_y = [-6000,7000,-8000]
 multi_x = [1,2,3,4,5]
@@ -31,7 +31,7 @@ def test_type():
     with pytest.raises(TypeError):
         CorrPy.cov_mx(single_x) # fail if only single value
         CorrPy.cov_mx(np.array([mix_type_x,mix_type_y])) # fail if wrong type
-        CorrPy.cov_mx(pos_neg_x) # fail if it is 1D array
+        CorrPy.cov_mx(positive_negative_x) # fail if it is 1D array
 
 def test_output():
     '''test if the output is in a valid format'''
@@ -49,8 +49,8 @@ def test_value():
     # test the correctness of the output if a input contains NA 
     assert (CorrPy.cov_mx(matrix_missing) == np.ones((4,4))*2.5).all() 
     # test the correctness of the output if a input contains a combination of positive and negative values
-    assert (CorrPy.cov_mx(np.array([pos_neg_x, pos_neg_y])) == np.cov(np.array([pos_neg_x, pos_neg_y]))).all()
+    assert (CorrPy.cov_mx(np.array([positive_negative_x, positive_negative_y])) == np.cov(np.array([positive_negative_x, positive_negative_y]))).all()
     # test the correctness of the output if a input contains large numbers
     assert (CorrPy.cov_mx(np.array([large_x, large_y])) == np.cov(np.array([large_x, large_y]))).all()
     # test the correctness of the output if a input contains zero vector
-    assert (CorrPy.cov_mx(np.array([zeros_x, pos_neg_y])) == np.cov(np.array([zeros_x, pos_neg_y]))).all() 
+    assert (CorrPy.cov_mx(np.array([zeros_x, positive_negative_y])) == np.cov(np.array([zeros_x, positive_negative_y]))).all() 
