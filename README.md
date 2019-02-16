@@ -1,6 +1,10 @@
+<img src="./docs/CorrPy.png" align="right" height="190" width="220"/>
+
 # CorrPy
 
 Latest Update Date: 2019 Feb.
+
+[Logo](http://francky.me/images/quora001.png)
 
 ## Overview
 
