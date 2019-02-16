@@ -1,4 +1,4 @@
-<img src="./docs/Corrpy.png" align="right" height="190" width="220"/>
+<img src="https://github.com/UBC-MDS/CorrPy/blob/master/docs/Corrpy.png" align="right" height="190" width="220"/>
 
 # CorrPy
 
