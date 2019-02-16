@@ -1,3 +1,5 @@
+<img src="docs/Corrpy.png" align="right" height="190" width="290"/>
+
 # CorrPy
 
 Latest Update Date: 2019 Feb.
