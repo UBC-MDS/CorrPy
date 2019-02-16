@@ -1,13 +1,13 @@
 ## Wilson Deng
 ## Feb 11th, 2019
-## `corr_plus` function coefficients calculates the relationship between
-## two variables as well as the magnitude of this relationship.
+## `corr_plus` function coefficients calculates the correlation between
+## two variables as well as the magnitude of this correlation.
 
 import numpy as np
 
 def corr_plus(var1, var2):
     '''
-    calculate the Pearson correlation coefficient between
+    Calculate the Pearson correlation coefficient between
     two variables using complete case analysis that excludes all observations
     that have NA for at least one variable.
 
