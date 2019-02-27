@@ -29,6 +29,25 @@ This package is developed to help users calculate correlation coefficients and c
 
 `pip install git+https://github.com/UBC-MDS/CorrPy.git`
 
+## Branch Coverage Test 
+
+To test branch coverage, we use coverage.py. You can install by `pip install coverage`.
+
+We also create a Makefile to automate the process. You can try
+
+```
+make coverage_br_corr_plus
+```
+
+The results are shown below.
+
+```
+Name                            Stmts   Miss Branch BrPart  Cover   Missing
+---------------------------------------------------------------------------
+CorrPy/test/test_std_plus.py       30      0      0      0   100%
+CorrPy/test/test_corr_plus.py      38      0      0      0   100%
+CorrPy/test/test_cov_mx.py         40      0      0      0   100%
+```
 
 ## Functions
 
