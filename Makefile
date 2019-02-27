@@ -29,8 +29,8 @@ coverage_branch : CorrPy/test/test_cov_mx.py CorrPy/test/test_corr_plus.py CorrP
 	coverage run -m --branch pytest -q CorrPy/test/test_cov_mx.py CorrPy/test/test_corr_plus.py CorrPy/test/test_std_plus.py
 	coverage report -m
 
-.PHONY : make_report
-make_report : 
+.PHONY : report
+report : coverage_branch
 	coverage html -d coverage_html
 
 

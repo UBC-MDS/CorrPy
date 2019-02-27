@@ -21,6 +21,8 @@ def test_type():
     '''test if the input is in a valid format'''
     with pytest.raises(TypeError):
         CorrPy.std_plus(char_x) # return ERROR if input vector has a string
+    with pytest.raises(TypeError):
+        CorrPy.std_plus([]) # return ERROR if input vector has a string
     assert np.isnan(CorrPy.std_plus(bool_x)) == False # expect a return if input vector has bool
     assert np.isnan(CorrPy.std_plus(positive_negative_x)) == False # expect a return if input vector type is numeric
 
