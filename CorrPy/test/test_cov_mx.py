@@ -25,6 +25,8 @@ missing_y = [2,3,4,5,np.nan,1,3,4]
 matrix_full = np.array(range(25), dtype=float).reshape((5, 5))
 matrix_missing = np.array(range(25), dtype=float).reshape((5, 5))
 matrix_missing[2,2] = np.nan
+matrix_3d = np.array(range(27), dtype=float).reshape((3,3,3))
+matrix_NA = np.array([[np.nan, np.nan],[np.nan, np.nan]])
 
 def test_type():
     '''test if the input is in a valid format'''
@@ -34,6 +36,8 @@ def test_type():
         CorrPy.cov_mx(np.array([mix_type_x,mix_type_y])) # fail if wrong type
     with pytest.raises(TypeError):
         CorrPy.cov_mx(positive_negative_x) # fail if it is 1D array
+    with pytest.raises(TypeError):
+        CorrPy.cov_mx(matrix_3d) # fail if it is 3D array
 
 def test_output():
     '''test if the output is in a valid format'''
@@ -43,6 +47,8 @@ def test_output():
     assert np.shape(CorrPy.cov_mx(matrix_full))[0] == np.shape(CorrPy.cov_mx(matrix_full))[1]
     # using pair wise complete so the shape is deducted
     assert np.shape(CorrPy.cov_mx(matrix_missing)) == (4,4)
+    # return None if the matrix only contains NA after removing
+    assert CorrPy.cov_mx(matrix_NA) == None
 
 def test_value():
     '''test the correctness of the output'''

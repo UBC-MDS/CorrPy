@@ -24,6 +24,7 @@ missing_x = [1,2,3,4,5,6,7, np.nan]
 missing_y = [2,3,4,5,np.nan,1,3,4]
 rm_x = [1,2,3,4,6,7]
 rm_y = [2,3,4,5,1,3]
+non_list = "list"
 
 def test_type():
     '''test if the input vectors are valid'''
@@ -31,6 +32,8 @@ def test_type():
         CorrPy.corr_plus(mix_type_x,mix_type_y) # expect ERROR if the input are not numeric
     with pytest.raises(TypeError):
         CorrPy.corr_plus(multi_x,multi_y_plus) # expect ERROR if the length of two vectors are different
+    with pytest.raises(TypeError):
+        CorrPy.corr_plus(multi_x,non_list) # expect ERROR if the input is not a list/array/tuple
 
 def test_output():
     '''test if the output is returned in the expected format'''
