@@ -24,6 +24,16 @@ coverage_br_cov_mx : CorrPy/test/test_cov_mx.py
 	coverage run -m --branch pytest -q CorrPy/test/test_cov_mx.py
 	coverage report -m
 
+.PHONY : coverage_branch
+coverage_branch : CorrPy/test/test_cov_mx.py CorrPy/test/test_corr_plus.py CorrPy/test/test_std_plus.py
+	coverage run -m --branch pytest -q CorrPy/test/test_cov_mx.py CorrPy/test/test_corr_plus.py CorrPy/test/test_std_plus.py
+	coverage report -m
+
+.PHONY : report
+report : coverage_branch
+	coverage html -d coverage_html
+
+
 ###################################################
 ### test coverage
 ###################################################
@@ -40,4 +50,9 @@ coverage_corr_plus : CorrPy/test/test_corr_plus.py
 .PHONY : coverage_cov_mx
 coverage_cov_mx : CorrPy/test/test_cov_mx.py
 	coverage run -m --branch pytest -q CorrPy/test/test_cov_mx.py
+	coverage report -m
+
+.PHONY : coverage_statement
+coverage_statement : CorrPy/test/test_cov_mx.py CorrPy/test/test_corr_plus.py CorrPy/test/test_std_plus.py
+	coverage run -m pytest -q CorrPy/test/test_cov_mx.py CorrPy/test/test_corr_plus.py CorrPy/test/test_std_plus.py
 	coverage report -m

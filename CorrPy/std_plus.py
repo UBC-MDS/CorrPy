@@ -15,20 +15,17 @@ def std_plus(x):
   ------
   sd_value (float): the value of standard deviation of the input data
   '''
+  # convert the input vector to numpy array if it is an array-like 
+  if isinstance(x, (list, tuple, np.ndarray)):
+    x = np.array(x)
+    
    # check whether a input vector is valid
   length = len(x)
   if length == 1: # return 0.0 The length of input equals to 1
     return 0.0
   elif length == 0: # return nan if no input 
-    raise ValueError("The input cannot be empty.")
-
-  # convert the input vector to numpy array if it is an array-like 
-  if isinstance(x, (list, tuple, np.ndarray)):
-    try:
-      x = np.array(x)
-    except:
-      print("Invalid data input.")
-  
+    raise TypeError("The input cannot be empty.")
+    
   # treat infinite values as missing values and remove them
   x = x[~ np.isinf(x)]
 
