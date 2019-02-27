@@ -4,3 +4,4 @@ docs/.Rhistory
 **__pycache__/
 **.vscode/
 **.coverage
+.coverage_html
