@@ -29,7 +29,8 @@ def test_type():
     '''test if the input vectors are valid'''
     with pytest.raises(TypeError):
         CorrPy.corr_plus(mix_type_x,mix_type_y) # expect ERROR if the input are not numeric
-        CorrPy.corr_plus(mix_type_x,multi_y_plus) # expect ERROR if the length of two vectors are different
+    with pytest.raises(TypeError):
+        CorrPy.corr_plus(multi_x,multi_y_plus) # expect ERROR if the length of two vectors are different
 
 def test_output():
     '''test if the output is returned in the expected format'''
@@ -44,9 +45,9 @@ def test_zero():
 def test_value():
     '''test the correctness of the output'''
     # deal with negative numbers
-    assert round(CorrPy.corr_plus(positive_negative_x, positive_negative_y),5) == round(np.corrcoef(positive_negative_x, positive_negative_y)[0,1],5) 
+    assert round(CorrPy.corr_plus(positive_negative_x, positive_negative_y),5) == round(np.corrcoef(positive_negative_x, positive_negative_y)[0,1],5)
     # can deal with large numbers
-    assert round(CorrPy.corr_plus(large_x, large_y),5) == round(np.corrcoef(large_x, large_y)[0,1],5) 
+    assert round(CorrPy.corr_plus(large_x, large_y),5) == round(np.corrcoef(large_x, large_y)[0,1],5)
     # can deal with missing values
-    assert CorrPy.corr_plus(missing_x, missing_x) == 1 
+    assert CorrPy.corr_plus(missing_x, missing_x) == 1
     assert round(CorrPy.corr_plus(missing_x, missing_y),5) == round(np.corrcoef(rm_x, rm_y)[0,1],5)

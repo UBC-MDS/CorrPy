@@ -1,0 +1,5 @@
+[
+  "CorrPy/test/test_cov_mx.py::test_type",
+  "CorrPy/test/test_cov_mx.py::test_output",
+  "CorrPy/test/test_cov_mx.py::test_value"
+]

@@ -25,14 +25,14 @@ def corr_plus(var1, var2):
         var1 = np.array(var1)
         var2 = np.array(var2)
     else:
-        raise ValueError("Invalid data input")
+        raise TypeError("Invalid data input")
 
     length_1 = len(var1)
     length_2 = len(var2)
 
     # Check input lengths
     if length_1 != length_2:
-        raise ValueError("Input should be equal")
+        raise TypeError("Input should be equal")
 
     # return None if two single input
     if length_1 == length_2 == 1:
