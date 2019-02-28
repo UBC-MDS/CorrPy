@@ -29,14 +29,15 @@ This package is developed to help users calculate correlation coefficients and c
 
 `pip install git+https://github.com/UBC-MDS/CorrPy.git`
 
-## Branch Coverage Test 
+## Branch Coverage Test
 
 To test branch coverage, we use coverage.py. You can install by `pip install coverage`.
 
-We also create a Makefile to automate the process. You can try
+We also create a Makefile to automate the process. You can try the following to observe
+branch coverage.
 
 ```
-make coverage_br_corr_plus
+make report
 ```
 
 The results are shown below.
@@ -44,9 +45,15 @@ The results are shown below.
 ```
 Name                            Stmts   Miss Branch BrPart  Cover   Missing
 ---------------------------------------------------------------------------
-CorrPy/test/test_std_plus.py       30      0      0      0   100%
-CorrPy/test/test_corr_plus.py      38      0      0      0   100%
-CorrPy/test/test_cov_mx.py         40      0      0      0   100%
+CorrPy/__init__.py                  4      0      0      0   100%
+CorrPy/corr_plus.py                26      0     12      0   100%
+CorrPy/cov_mx.py                   20      0      8      0   100%
+CorrPy/std_plus.py                 15      0      8      0   100%
+CorrPy/test/__init__.py             0      0      0      0   100%
+CorrPy/test/test_corr_plus.py      41      0      0      0   100%
+CorrPy/test/test_cov_mx.py         45      0      0      0   100%
+CorrPy/test/test_std_plus.py       35      0      0      0   100%
+---------------------------------------------------------------------------
 ```
 
 ## Functions
@@ -62,7 +69,7 @@ Standard deviation calculates how close the data points to the mean, in which an
 `std_plus` will omit frustration from workflows.
 
 <BR>
- 
+
 ### *Example*:
 
 ```Python
@@ -87,7 +94,7 @@ Correlation coefficients calculates the relationship between two variables as we
 <a href="https://www.codecogs.com/eqnedit.php?latex=r&space;=&space;\frac{1}{n-1}(\frac{\sum(x-\overline{x})(y-\overline{y})}{s_{x}s_{y}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?r&space;=&space;\frac{1}{n-1}(\frac{\sum(x-\overline{x})(y-\overline{y})}{s_{x}s_{y}})" title="r = \frac{1}{n-1}(\frac{\sum(x-\overline{x})(y-\overline{y})}{s_{x}s_{y}})" /></a>
 
 <BR>
- 
+
 ### *Example*:
 
 ```Python
@@ -100,7 +107,7 @@ array([0.7391090892601785])
 
 
 <BR>
- 
+
 ### Covariance Matrix (`cov_mx`)
 
 A Covariance matrix displays the variance and covariance together. This function would use the above two functions.
@@ -115,7 +122,7 @@ A covariance matrix displays the variance and covariance together. The diagonal 
 
 
 <BR>
- 
+
 ### *Example*:
 
 ```Python
@@ -129,7 +136,7 @@ array([[ 2.33333333, 12.66666667],
 
 
 <BR>
- 
+
 ### *How does `CorrPy` package fits into the Python ecosystem?*
 
   Following functions are already present in Python ecosystem. However, missing values are not being handles for the following functions and `CorrPy` package will implement calculation of standard deviation, correlation coefficients and covariance matrix.
