@@ -4,7 +4,7 @@
 ## Purpose: This script is to create a fully automated pipeline
 ## 					of our project
 ##
-## Usage : make <target> or <all> or <clean>
+## Usage : make report_branch
 
 ###################################################
 ### test branch coverage
@@ -29,13 +29,13 @@ coverage_branch : CorrPy/test/test_cov_mx.py CorrPy/test/test_corr_plus.py CorrP
 	coverage run -m --branch pytest -q CorrPy/test/test_cov_mx.py CorrPy/test/test_corr_plus.py CorrPy/test/test_std_plus.py
 	coverage report -m
 
-.PHONY : report
-report : coverage_branch
+.PHONY : report_branch
+report_branch : coverage_branch
 	coverage html -d coverage_html
 
 
 ###################################################
-### test coverage
+### test statement coverage
 ###################################################
 .PHONY : coverage_std_plus
 coverage_std_plus : CorrPy/test/test_std_plus.py
