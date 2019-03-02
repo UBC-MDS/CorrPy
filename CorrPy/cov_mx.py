@@ -2,13 +2,13 @@ import numpy as np
 
 def cov_mx(m):
     '''
-    calculate covariance matrix that measures the extent to which corresponding observations
-    from two sets of ordered variables vary in a direction.
+    calculates the covariance matrix of the two variables and 
+    automatically deals with the missing value
 
     parameters:
     -----------
-    matrix m (2D np.array): a matrix that contains one or more than one random variable
-
+    matrix m (2D np.array): a matrix that contains one or more than one random variable.
+                            Each row stands for each variables.
     Return:
     -------
     cov_matrix c (2D np.array): a matrix that contains the covariance 
