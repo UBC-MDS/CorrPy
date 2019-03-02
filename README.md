@@ -37,7 +37,7 @@ We also create a Makefile to automate the process. You can try the following to 
 branch coverage.
 
 ```
-make report
+make report_branch
 ```
 
 The results are shown below.
