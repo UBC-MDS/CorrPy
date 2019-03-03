@@ -7,6 +7,13 @@
 ## Usage : make report_branch
 
 ###################################################
+### test files 
+###################################################
+.PHONY : test_all
+test_all : CorrPy/test/test_cov_mx.py CorrPy/test/test_corr_plus.py CorrPy/test/test_std_plus.py
+	pytest CorrPy/test/test_cov_mx.py CorrPy/test/test_corr_plus.py CorrPy/test/test_std_plus.py
+
+###################################################
 ### test branch coverage
 ###################################################
 .PHONY : coverage_br_std_plus
