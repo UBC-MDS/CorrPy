@@ -56,6 +56,14 @@ CorrPy/test/test_std_plus.py       35      0      0      0   100%
 ---------------------------------------------------------------------------
 ```
 
+## Test
+
+To test all the files, we use `pytest` by `make test_all`.
+
+The results are shown below.
+
+![](./docs/test.png)
+
 ## Functions
 
 ### Standard Deviation (`std_plus`)
