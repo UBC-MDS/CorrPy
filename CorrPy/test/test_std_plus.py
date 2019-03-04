@@ -21,7 +21,7 @@ def test_type():
     '''test if the input is in a valid format'''
     with pytest.raises(TypeError):
         CorrPy.std_plus(char_x) # return ERROR if input vector has a string
-    with pytest.raises(TypeError):
+    with pytest.raises(IndexError):
         CorrPy.std_plus([]) # return ERROR if input vector is empty
     with pytest.raises(TypeError):
         CorrPy.std_plus(1) # return ERROR if input vector is not array-like
@@ -47,6 +47,5 @@ def test_value():
     assert CorrPy.std_plus(inf_x) == CorrPy.std_plus(multi_x)
     # return zero if input vector are all zeros
     assert CorrPy.std_plus(zeros_x) == 0.0
-    # return nan if input vector is empty after removing 
-    assert np.isnan(CorrPy.std_plus([np.nan, np.nan, np.nan])) == True 
-
+    # return nan if input vector is empty after removing
+    assert np.isnan(CorrPy.std_plus([np.nan, np.nan, np.nan])) == True

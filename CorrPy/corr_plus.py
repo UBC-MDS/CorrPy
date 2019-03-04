@@ -5,7 +5,7 @@
 
 import numpy as np
 
-def corr_plus(var1, var2):
+def corr_plus(var1: np.array, var2: np.array):
     '''
     Calculate the Pearson correlation coefficient between
     two variables using complete case analysis that excludes all observations
