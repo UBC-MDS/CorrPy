@@ -1,2 +1,4 @@
 python_version>='3.6'
 numpy>=1.15
+git+https://github.com/UBC-MDS/CleanPy.git
+pytest
