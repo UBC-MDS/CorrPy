@@ -1,2 +1,2 @@
-import numpy as np
-import pytest
+python_version>='3.6'
+numpy>=1.15
