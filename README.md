@@ -1,5 +1,7 @@
 <img src="docs/Corrpy.png" align="right" height="190" width="290"/>
 
+[![Build Status](https://travis-ci.org/UBC-MDS/CorrPy.svg?branch=master)](https://travis-ci.org/UBC-MDS/CorrPy)
+
 # CorrPy
 
 Latest Update Date: 2019 Feb.
