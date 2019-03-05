@@ -6,4 +6,6 @@ install:
   - pip install -r requirements.txt
 # command to run tests
 script:
-  - pytest
+  - pytest CorrPy/test/test_std_plus.py
+  - pytest CorrPy/test/test_corr_plus.py
+  - pytest CorrPy/test/text_cov_mx.py
