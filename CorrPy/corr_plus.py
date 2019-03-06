@@ -31,8 +31,15 @@ def corr_plus(var1: np.array, var2: np.array):
     length_2 = len(var2)
 
     # Check input lengths
-    if length_1 != length_2:
-        raise TypeError("Input should be equal")
+    try:
+        max_length = max(length_1, length_2)
+        var1[max_length - 1]
+        var2[max_length - 1]
+    except IndexError as detail:
+        raise IndexError(str(detail))
+
+    #if length_1 != length_2:
+    #    raise TypeError("Input should be equal")
 
     # return None if two single input
     if length_1 == length_2 == 1:

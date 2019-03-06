@@ -30,7 +30,7 @@ def test_type():
     '''test if the input vectors are valid'''
     with pytest.raises(TypeError):
         CorrPy.corr_plus(mix_type_x,mix_type_y) # expect ERROR if the input are not numeric
-    with pytest.raises(TypeError):
+    with pytest.raises(IndexError):
         CorrPy.corr_plus(multi_x,multi_y_plus) # expect ERROR if the length of two vectors are different
     with pytest.raises(TypeError):
         CorrPy.corr_plus(multi_x,non_list) # expect ERROR if the input is not a list/array/tuple
