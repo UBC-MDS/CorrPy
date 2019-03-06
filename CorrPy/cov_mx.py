@@ -19,7 +19,13 @@ def cov_mx(m: np.array):
     m = np.asarray(m)
     if m.ndim == 1:
         raise TypeError("Input should be a 2D array")
-    elif m.ndim > 2:
+    # elif m.ndim > 2:
+    #     raise TypeError("m has more than 2 dimensions")
+    # raise exception when the input dimensions is more than 2
+    try:
+        if m.ndim > 2:
+            raise Exception()
+    except:
         raise TypeError("m has more than 2 dimensions")
 
     # convert the input to a valid matrix (2D array)
