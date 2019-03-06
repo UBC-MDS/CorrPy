@@ -4,7 +4,14 @@
 ## Purpose: This script is to create a fully automated pipeline
 ## 					of our project
 ##
-## Usage : make <target> or <all> or <clean>
+## Usage : make report_branch
+
+###################################################
+### test files 
+###################################################
+.PHONY : test_all
+test_all : CorrPy/test/test_cov_mx.py CorrPy/test/test_corr_plus.py CorrPy/test/test_std_plus.py
+	pytest CorrPy/test/test_cov_mx.py CorrPy/test/test_corr_plus.py CorrPy/test/test_std_plus.py
 
 ###################################################
 ### test branch coverage
@@ -24,8 +31,18 @@ coverage_br_cov_mx : CorrPy/test/test_cov_mx.py
 	coverage run -m --branch pytest -q CorrPy/test/test_cov_mx.py
 	coverage report -m
 
+.PHONY : coverage_branch
+coverage_branch : CorrPy/test/test_cov_mx.py CorrPy/test/test_corr_plus.py CorrPy/test/test_std_plus.py
+	coverage run -m --branch pytest -q CorrPy/test/test_cov_mx.py CorrPy/test/test_corr_plus.py CorrPy/test/test_std_plus.py
+	coverage report -m
+
+.PHONY : report_branch
+report_branch : coverage_branch
+	coverage html -d coverage_html
+
+
 ###################################################
-### test coverage
+### test statement coverage
 ###################################################
 .PHONY : coverage_std_plus
 coverage_std_plus : CorrPy/test/test_std_plus.py
@@ -40,4 +57,9 @@ coverage_corr_plus : CorrPy/test/test_corr_plus.py
 .PHONY : coverage_cov_mx
 coverage_cov_mx : CorrPy/test/test_cov_mx.py
 	coverage run -m --branch pytest -q CorrPy/test/test_cov_mx.py
+	coverage report -m
+
+.PHONY : coverage_statement
+coverage_statement : CorrPy/test/test_cov_mx.py CorrPy/test/test_corr_plus.py CorrPy/test/test_std_plus.py
+	coverage run -m pytest -q CorrPy/test/test_cov_mx.py CorrPy/test/test_corr_plus.py CorrPy/test/test_std_plus.py
 	coverage report -m

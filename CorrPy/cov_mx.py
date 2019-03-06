@@ -1,6 +1,6 @@
 import numpy as np
 
-def cov_mx(m):
+def cov_mx(m: np.array):
     '''
     calculates the covariance matrix of the two variables and
     automatically deals with the missing value
@@ -27,7 +27,6 @@ def cov_mx(m):
             raise Exception()
     except:
         raise TypeError("m has more than 2 dimensions")
-
 
     # convert the input to a valid matrix (2D array)
     m = np.array(m, ndmin=2)

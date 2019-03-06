@@ -4,3 +4,6 @@ docs/.Rhistory
 **__pycache__/
 **.vscode/
 **.coverage
+coverage_html
+**.mypy_cache/
+**.pytest_cache/
